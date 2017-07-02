@@ -1,0 +1,35 @@
+{
+  "name": "twitter_bot_practice",
+  "version": "0.0.1",
+  "description": "Node.js practice, twitter bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node_modules/.bin/jasmine-node spec --color --verbose --autotest --watch .",
+    "coverage": "./node_modules/.bin/istanbul cover -x **spec/** -x **index.js** jasmine-node spec",
+    "linter": "node_modules/.bin/eslint .",
+    "apidoc": "node_modules/.bin/apidoc -e node_modules/"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "api",
+    "twitter",
+    "bot"
+  ],
+  "author": "Miroslav Ivanov",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "apidoc": "^0.17.6",
+    "eslint": "^4.1.1",
+    "istanbul": "^0.4.5",
+    "jasmine-node": "^1.14.5",
+    "twit": "^2.2.9"
+  },
+  "devDependencies": {}
+}
