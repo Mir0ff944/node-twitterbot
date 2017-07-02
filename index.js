@@ -1,7 +1,7 @@
 'use consts'
 
 const Twit = require('twit')
-const access = require('./access_tokens.js')
+const access = require('./access.js')
 
 const token = access.config
 
