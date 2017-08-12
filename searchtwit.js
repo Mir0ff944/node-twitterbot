@@ -9,9 +9,12 @@ const T = new Twit(access.config)
 
 function searchTwit() {
 
+  const twittag = String(readline.question("What are we looking for today?: ").trim())
+  const twitcount = String(readline.question("How many are we looking for?: ").trim())
+
   const searchParam = {
-    q: controlellr.twittag,
-    count : controller.twitcount
+    q: twittag,
+    count : twitcount
   }
 
   T.get('search/tweets', searchParam, gotTweets)
