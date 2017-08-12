@@ -12,12 +12,10 @@ const greeting = String(readline.question('Hello, commands accepted are "post" a
 
 switch (greeting) {
   case 'post':
-
+    posttwit.postTweet();
     break;
   case 'get':
-    const twittag = String(readline.question("What are we looking for today?: ").trim())
-    const twitcount = String(readline.question("How many are we looking for?: ").trim())
-    gettwit.searchTwit()
+    gettwit.searchTwit();
     break;
   default:
     alert(`Command ${greeting} is not acceped`)
