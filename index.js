@@ -12,7 +12,7 @@ const stream = require('./stream.js')
 
 const T = new Twit(access.config)
 
-const greeting = String(readline.question('Hello, commands accepted: \n p: "POST" \n s: "SEARCH" \n lf: "LIVE FILTER"').trim())
+const greeting = String(readline.question('Hello, commands accepted: \n p: "POST" \n s: "SEARCH" \n lf: "LIVE FILTER"\n >').trim())
 
 switch (greeting) {
   case 'p':
