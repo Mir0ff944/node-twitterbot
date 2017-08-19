@@ -16,6 +16,6 @@ exports.liveFilter = function() {
   streamFilter.on('tweet', function(tweet) {
     console.log(`###################\n` +
       `Tweet: ${tweet.text}\n` + `Tweet id: ${tweet.id}\n` + `Date: ${tweet.created_at}\n` + `User: ${tweet.user.screen_name} from ${tweet.user.location}\n` + `In reply of: ${tweet.in_relpy_to_user_id_str}\n` +
-      `--------> Listening for '${keyword}' in the Tweeter Universe ;)`)
+      `> Listening for '${keyword}' in the Tweeter Universe ;)`)
   })
 }
