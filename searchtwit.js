@@ -25,7 +25,8 @@ exports.searchTwit = function(){
     // console.log('################')
     for (var i = 0; i < tweet_results.length; i++) {
       console.log('################')
-      console.log(`Tweet: ${tweet_results[i].text}\n` + `Tweet id: ${tweet_results[i].id}\n` + `Date: ${tweet_results[i].created_at}\n` + `User: ${tweet_results[i].user.screen_name} from ${tweet_results[i].user.location}\n` + `In reply of: ${tweet_results[i].in_relpy_to_user_id_str}`)
+      console.log(`Tweet: ${tweet_results[i].text}\n` + `Tweet id: ${tweet_results[i].id}\n` + `Tweet url: ${tweet_results[i].entities.urls[0].url}\n` + `Date: ${tweet_results[i].created_at}\n` + `User: ${tweet_results[i].user.screen_name} from ${tweet_results[i].user.location}\n` +
+        `In reply of: ${tweet_results[i].in_relpy_to_user_id_str}\n`)
     }
   }
 }

@@ -29,7 +29,7 @@ exports.postMedia = function() {
   const path = String(readline.question("Path to image: ").trim())
   const query = fs.readFileSync(path, {encoding: 'base64'})
 
-  T.post('media/post', {media_data = query}, function (err,data,response) {
+  T.post('media/post', {media_data: query}, function (err,data,response) {
     const mediaIdStr = data.media_id_string
     const metaText = String(readline.question("Meta text (this would not show in the post): ").trim())
     const meta_parameters = {media_id: mediaIdStr, alt_text: {text: metaText}}
@@ -37,7 +37,7 @@ exports.postMedia = function() {
     T.post('media/metadata/create', meta_parameters, function(err,data,response) {
       if (!err) {
         const status_text = String(readline.question('Tweet text: ').trim())
-        const tweet_params = { tatus: status_text, media_ids: [mediaIdStr]}
+        const tweet_params = {status: status_text, media_ids: [mediaIdStr]}
 
         T.post('statuses/update', tweet_params, function(err,data,response) {
           console.log(`Tweeted: ${data.text}\n` +
